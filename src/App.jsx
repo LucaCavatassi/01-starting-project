@@ -1,4 +1,5 @@
 import img from "./assets/react-core-concepts.png";
+import componentsImg from "./assets/components.png"
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 // random index generator
@@ -21,10 +22,33 @@ function Header() {
   );
 }
 
+function CoreConcept(props) {
+  return( 
+  <li>
+    <img src={props.img} alt="" />
+    <h3>{props.title}</h3>
+    <p>{props.description}</p>
+  </li>
+  )
+}
+
 function App() {
   return (
     <div>
       <Header />
+      <section id="core-concepts">
+        <h2>Core Concepts</h2>
+        <ul>
+          <CoreConcept 
+            title="Components" 
+            description="The core UI buidling block" 
+            img={componentsImg}
+          />
+          <CoreConcept />
+          <CoreConcept />
+          <CoreConcept />
+        </ul>
+      </section>
       <main>
         <h2>Time to get started!</h2>
       </main>
