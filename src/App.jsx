@@ -6,7 +6,10 @@ import { CORE_CONCEPTS } from "./data.js";
 function App() {
   return (
     <div>
-      <Header />
+      <main>
+        <Header />
+
+        {/* CARDS */}
         <section id="core-concepts">
           <h2>Core Concepts</h2>
           <ul>
@@ -21,14 +24,17 @@ function App() {
               <CoreConcept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
+
+        {/* EXAMPLES */}
         <section id="examples">
           <h2>Examples</h2>
           <menu>
             <TabButton> Components </TabButton>
+            <TabButton> JSX </TabButton>
+            <TabButton> Props </TabButton>
+            <TabButton> State </TabButton>
           </menu>
         </section>
-      <main>
-        <h2>Time to get started!</h2>
       </main>
     </div>
   );
