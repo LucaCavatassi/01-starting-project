@@ -3,6 +3,10 @@ import CoreConcept from "./components/CoreConcepts/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 import { CORE_CONCEPTS } from "./data.js";
 
+function handleClick() {
+        console.log("hello i'm clicked");  
+    }
+
 function App() {
   return (
     <div>
@@ -29,11 +33,13 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton> Components </TabButton>
-            <TabButton> JSX </TabButton>
-            <TabButton> Props </TabButton>
-            <TabButton> State </TabButton>
+            <TabButton click={handleClick} > Components </TabButton>
+            <TabButton click={handleClick} > JSX </TabButton>
+            <TabButton click={handleClick} > Props </TabButton>
+            <TabButton click={handleClick} > State </TabButton>
           </menu>
+          {/* Dynamic Content */}
+
         </section>
       </main>
     </div>
