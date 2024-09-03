@@ -1,4 +1,4 @@
-
+import "./CoreConcept.css";
 // function CoreConcept(props) {
 //   return( 
 //   <li>
@@ -10,6 +10,8 @@
 // }
 
 // same code destructured
+
+
 export default function CoreConcept({title, image, description}) {
     return( 
     <li>
