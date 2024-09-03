@@ -1,5 +1,5 @@
 import "./Header.css";
-import img from "../assets/react-core-concepts.png";
+import img from "../../assets/react-core-concepts.png";
 
 const reactDescriptions = ["Fundamental", "Crucial", "Core"];
 // random index generator
