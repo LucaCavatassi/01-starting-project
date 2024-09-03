@@ -1,5 +1,11 @@
 import "../index.css"
 
 export default function TabButton (props) {
-    return <li> <button>{ props.children }</button> </li>
+    function handleClick() {
+        console.log(props.children);  
+    }
+
+    return <li> 
+        <button onClick={handleClick}>{ props.children }</button> 
+    </li>
 }
