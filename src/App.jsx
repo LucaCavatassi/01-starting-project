@@ -3,10 +3,11 @@ import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcepts/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 import { CORE_CONCEPTS } from "./data.js";
+import { EXAMPLES } from "./data.js";
 
 
 function App() {
-  const [selectedTopic , setSelectedTopic] = useState("Please click a button!");
+  const [selectedTopic , setSelectedTopic] = useState("components");
 
   // console.log("app execution"); with this you can see that app it's re-executed
   
@@ -48,7 +49,15 @@ function App() {
             <TabButton click={() => handleClick("state")} > State </TabButton>
           </menu>
           {/* Dynamic Content */}
-          {selectedTopic}
+          <div id="tab-content">
+            <h3> {EXAMPLES[selectedTopic].title} </h3>
+            <p>{EXAMPLES[selectedTopic].description} </p>
+            <pre>
+              <code>
+                {EXAMPLES[selectedTopic].code} 
+              </code>
+            </pre>
+          </div>
         </section>
       </main>
     </div>
