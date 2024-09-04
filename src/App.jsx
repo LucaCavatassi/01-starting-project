@@ -30,9 +30,9 @@ function App() {
   }
 
   return (
-    <div>
+    <>
+      <Header />
       <main>
-        <Header />
 
         {/* CARDS */}
         <section id="core-concepts">
@@ -55,7 +55,7 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
