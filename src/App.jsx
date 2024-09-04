@@ -1,14 +1,22 @@
+import { useState } from "react";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcepts/CoreConcepts.jsx";
 import TabButton from "./components/TabButton.jsx";
 import { CORE_CONCEPTS } from "./data.js";
 
-function handleClick(selectedButton) {
-      console.log(selectedButton);
-      return selectedButton
-    }
 
 function App() {
+  const [selectedTopic , setSelectedTopic] = useState("Please click a button!");
+
+  // console.log("app execution"); with this you can see that app it's re-executed
+  
+  function handleClick(selectedButton) {
+        setSelectedTopic(selectedButton)
+        console.log(selectedTopic);
+        
+      }
+
+
   return (
     <div>
       <main>
@@ -40,7 +48,7 @@ function App() {
             <TabButton click={() => handleClick("state")} > State </TabButton>
           </menu>
           {/* Dynamic Content */}
-
+          {selectedTopic}
         </section>
       </main>
     </div>
