@@ -1,11 +1,11 @@
 import "../index.css"
 
-export default function TabButton (props) {
+export default function TabButton ({isSelected, children, ...props}) {
     // function handleClick() {
     //     console.log(props.children);  
     // }
     return (<li> 
-        <button className={props.isSelected ? "active" : ""} onClick={props.click}>{ props.children }</button> 
+        <button className={isSelected ? "active" : ""} {...props}>{ children }</button> 
     </li>
     );
 }

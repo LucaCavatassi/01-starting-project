@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TabButton from "./TabButton.jsx"
 import { EXAMPLES } from "../data.js";
-
+import Section from "./section.jsx";
 
 export default function Examples() {
     const [selectedTopic , setSelectedTopic] = useState("");
@@ -27,16 +27,15 @@ export default function Examples() {
     }
 
     return (
-        <section id="examples">
-            <h2>Examples</h2>
+        <Section title="Examples" id="examples">
             <menu>
-                <TabButton isSelected={selectedTopic === "components"}  click={() => handleClick("components")} > Components </TabButton>
-                <TabButton isSelected={selectedTopic === "jsx"}  click={() => handleClick("jsx")} > JSX </TabButton>
-                <TabButton isSelected={selectedTopic === "props"}  click={() => handleClick("props")} > Props </TabButton>
-                <TabButton isSelected={selectedTopic === "state"}  click={() => handleClick("state")} > State </TabButton>
+                <TabButton isSelected={selectedTopic === "components"}  onClick={() => handleClick("components")} > Components </TabButton>
+                <TabButton isSelected={selectedTopic === "jsx"}  onClick={() => handleClick("jsx")} > JSX </TabButton>
+                <TabButton isSelected={selectedTopic === "props"}  onClick={() => handleClick("props")} > Props </TabButton>
+                <TabButton isSelected={selectedTopic === "state"}  onClick={() => handleClick("state")} > State </TabButton>
             </menu>
             {/* Dynamic Content */}
             {tabContent}
-        </section>
+        </Section>
     )
 }
