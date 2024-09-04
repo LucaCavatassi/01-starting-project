@@ -49,7 +49,8 @@ function App() {
             <TabButton click={() => handleClick("state")} > State </TabButton>
           </menu>
           {/* Dynamic Content */}
-            {!selectedTopic ? <p> Please Select a topic. </p> : <div id="tab-content">
+            {!selectedTopic ? <p> Please Select a topic. </p> : 
+            <div id="tab-content">
               <h3> {EXAMPLES[selectedTopic].title} </h3>
               <p>{EXAMPLES[selectedTopic].description} </p>
               <pre>
@@ -57,7 +58,8 @@ function App() {
                   {EXAMPLES[selectedTopic].code} 
                 </code>
               </pre>
-            </div> }
+            </div> 
+            }
             
         </section>
       </main>
